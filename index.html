@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMIT Faisalabad Social Media Links</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            background: linear-gradient(120deg, #0a7cba 0%, #22c55e 60%, #16a34a 100%);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+        .container {
+            background: rgba(255,255,255,0.45);
+            margin-top: 0;
+            padding: 16px 0 10px 0;
+            border-radius: 0;
+            box-shadow: none;
+            width: 100vw;
+            min-height: 100vh;
+            position: relative;
+            z-index: 1;
+        }
+        .main-heading {
+            font-size: 1.7em;
+            font-weight: 700;
+            color: #0a7cba;
+            text-align: center;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            background: #e0f3ff;
+            border-radius: 8px;
+            padding: 10px 0;
+        }
+        .smit-heading {
+            font-size: 1.25em;
+            font-weight: 700;
+            color: #0a7cba;
+            text-align: center;
+            margin-bottom: 10px;
+            opacity: 1;
+            background: #e0f3ff;
+            border-radius: 8px;
+            padding: 10px 0;
+            letter-spacing: 0.5px;
+            box-shadow: 0 2px 8px rgba(10,124,186,0.07);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .social-grid {
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            align-items: center;
+        }
+        .social-row {
+            display: flex;
+            flex-direction: row;
+            gap: 8px;
+            width: 100%;
+            justify-content: center;
+        }
+        .social-section {
+            flex: 1 1 0;
+            min-width: 0;
+            max-width: 350px;
+            background: #f0f8ff;
+            border-radius: 10px;
+            box-shadow: 0 1px 4px rgba(10,124,186,0.05);
+            display: flex;
+            align-items: center;
+            padding: 7px 7px;
+            gap: 7px;
+        }
+        .icon {
+            width: 28px;
+            height: 28px;
+            min-width: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .icon svg {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        .desc-link {
+            flex: 1;
+        }
+        .desc {
+            font-size: 0.92em;
+            color: #333;
+            margin-bottom: 2px;
+        }
+        .social-link {
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            background: #0a7cba;
+            padding: 4px 10px;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 0.92em;
+            transition: background 0.2s, box-shadow 0.2s;
+            box-shadow: 0 1px 4px rgba(10,124,186,0.08);
+        }
+        .social-link:hover {
+            background: #085a8a;
+        }
+        @media (max-width: 900px) {
+            .social-row {
+                flex-direction: column;
+                gap: 6px;
+                width: 98vw;
+            }
+            .social-section {
+                width: 98vw;
+                max-width: 98vw;
+            }
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 4px 0 4px 0;
+            }
+            .main-heading {
+                font-size: 1em;
+            }
+            .smit-heading {
+                font-size: 0.85em;
+                padding: 3px 0;
+            }
+            .social-section {
+                font-size: 0.9em;
+                padding: 4px 4px;
+            }
+            .icon {
+                width: 22px;
+                height: 22px;
+                min-width: 22px;
+            }
+        }
+        .last-row-center {
+            display: flex;
+            justify-content: center;
+            width: 100vw;
+            margin-top: 0;
+        }
+        .last-whatsapp-section {
+            max-width: 420px;
+            width: 60vw;
+            min-width: 270px;
+            background: #e0ffe6;
+            border: 2px solid #25D366;
+            box-shadow: 0 4px 16px rgba(37,211,102,0.12);
+            padding: 18px 18px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.15em;
+        }
+        @media (max-width: 900px) {
+            .last-whatsapp-section {
+                width: 90vw;
+                max-width: 98vw;
+            }
+        }
+        .news-ticker {
+            width: 100vw;
+            background: #e0f3ff;
+            color: #0a7cba;
+            font-weight: 600;
+            font-size: 1em;
+            padding: 7px 0 7px 0;
+            border-bottom: 2px solid #b6e0ff;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 4px;
+        }
+        .news-scroll-container {
+            flex: 1;
+            overflow: hidden;
+            position: relative;
+            min-width: 0;
+            display: block;
+        }
+        .news-text {
+            display: inline-block;
+            white-space: nowrap;
+            padding-left: 100%;
+            animation: ticker-scroll 18s linear infinite;
+        }
+        @keyframes ticker-scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+        .news-label {
+            background: #0a7cba;
+            color: #fff;
+            padding: 3px 10px;
+            border-radius: 5px;
+            margin-right: 12px;
+            font-size: 0.95em;
+            margin-left: 18px;
+        }
+        .footer {
+            width: 100vw;
+            background: rgba(224,243,255,0.65);
+            color: #0a7cba;
+            text-align: center;
+            padding: 6px 0 4px 0;
+            font-size: 0.95em;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            border-top: 2px solid #b6e0ff;
+            margin-top: auto;
+            position: relative;
+            z-index: 2;
+        }
+        .courses-btn {
+            background: #0a7cba;
+            color: #fff;
+            font-size: 0.88em;
+            font-weight: 500;
+            padding: 4px 14px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 1px 4px rgba(10,124,186,0.08);
+            cursor: pointer;
+            transition: background 0.2s, box-shadow 0.2s;
+            letter-spacing: 0.2px;
+            margin-left: 12px;
+        }
+        .courses-btn:hover {
+            background: #085a8a;
+            box-shadow: 0 4px 16px rgba(10,124,186,0.13);
+        }
+        .follow-social-message {
+            width: 100vw;
+            background: #e0f3ff;
+            color: #0a7cba;
+            text-align: center;
+            font-size: 0.95em;
+            font-weight: 600;
+            padding: 6px 0 4px 0;
+            letter-spacing: 0.5px;
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+        .smit-dp-icon {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            border: 2px solid #e0f3ff;
+        }
+        .smit-dp-icon img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            object-position: 50% 38%;
+            background: #fff;
+        }
+        .section-heading {
+            text-align: center;
+            font-size: 1.25em;
+            font-weight: 700;
+            color: #0a7cba;
+            margin: 10px 0 10px 0;
+            letter-spacing: 0.5px;
+            background: #e0f3ff;
+            border-radius: 8px;
+            padding: 8px 0;
+            box-shadow: 0 2px 8px rgba(10,124,186,0.07);
+        }
+        .footer-location {
+            display: block;
+            margin-top: 6px;
+            color: #0a7cba;
+            font-size: 0.98em;
+            font-weight: 500;
+            letter-spacing: 0.2px;
+        }
+        .footer-location-bar {
+            width: 100vw;
+            background: rgba(224,243,255,0.65);
+            color: #0a7cba;
+            text-align: center;
+            font-size: 0.95em;
+            font-weight: 600;
+            padding: 6px 0 4px 0;
+            letter-spacing: 0.3px;
+            border-top: 2px solid #b6e0ff;
+            border-bottom: 2px solid #b6e0ff;
+        }
+        .footer-location-label {
+            color: #0a7cba;
+            font-weight: 700;
+            margin-right: 6px;
+        }
+    </style>
+
+    <!-- SVG ICONS -->
+    <svg style="display:none;">
+        <symbol id="icon-fb" viewBox="0 0 32 32">
+            <path fill="#1877F3" d="M32 16.1C32 7.2 24.8 0 16 0S0 7.2 0 16.1c0 8 5.8 14.6 13.3 15.8v-11.2h-4v-4.6h4v-3.5c0-4 2.4-6.2 6-6.2 1.7 0 3.5.3 3.5.3v3.9h-2c-2 0-2.6 1.2-2.6 2.4v3h4.4l-.7 4.6h-3.7v11.2C26.2 30.7 32 24.1 32 16.1z"/>
+        </symbol>
+        <symbol id="icon-fb-group" viewBox="0 0 32 32">
+            <circle fill="#1877F3" cx="16" cy="16" r="16"/>
+            <ellipse fill="#fff" cx="10.5" cy="15.5" rx="3.5" ry="4.5"/>
+            <ellipse fill="#fff" cx="21.5" cy="15.5" rx="3.5" ry="4.5"/>
+            <ellipse fill="#1877F3" cx="16" cy="22" rx="7" ry="3"/>
+        </symbol>
+        <symbol id="icon-whatsapp" viewBox="0 0 32 32">
+            <circle fill="#25D366" cx="16" cy="16" r="16"/>
+            <path fill="#fff" d="M24.1 20.7c-.4-.2-2.3-1.1-2.6-1.2-.3-.1-.5-.2-.7.2-.2.4-.7 1.2-.9 1.4-.2.2-.3.3-.7.1-.4-.2-1.5-.6-2.8-1.8-1-1-1.7-2.2-1.9-2.6-.2-.4 0-.6.2-.8.2-.2.4-.5.6-.7.2-.2.2-.4.3-.6.1-.2 0-.5 0-.7 0-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5-.2 0-.4 0-.6 0-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.1 0 1.2.9 2.3 1 2.5.1.2 1.7 2.7 4.1 3.7.6.3 1.1.5 1.5.6.6.2 1.1.2 1.5.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2z"/>
+        </symbol>
+        <symbol id="icon-x" viewBox="0 0 32 32">
+            <rect width="32" height="32" rx="16" fill="#000"/>
+            <path fill="#fff" d="M22.6 9.1h-2.1l-4.1 5.2-4.1-5.2H9.1l5.2 6.6-5.2 6.6h2.1l4.1-5.2 4.1 5.2h2.1l-5.2-6.6z"/>
+        </symbol>
+        <symbol id="icon-linkedin" viewBox="0 0 32 32">
+            <circle fill="#0077B5" cx="16" cy="16" r="16"/>
+            <rect x="8" y="13" width="3" height="9" fill="#fff"/>
+            <rect x="14" y="13" width="3" height="9" fill="#fff"/>
+            <circle cx="9.5" cy="10.5" r="1.5" fill="#fff"/>
+            <rect x="20" y="13" width="3" height="9" fill="#fff"/>
+        </symbol>
+        <symbol id="icon-instagram" viewBox="0 0 32 32">
+            <radialGradient id="ig-gradient" cx="16" cy="16" r="16" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#f9ce34"/>
+                <stop offset="50%" stop-color="#ee2a7b"/>
+                <stop offset="100%" stop-color="#6228d7"/>
+            </radialGradient>
+            <circle fill="url(#ig-gradient)" cx="16" cy="16" r="16"/>
+            <rect x="10" y="10" width="12" height="12" rx="4" fill="#fff"/>
+            <circle cx="16" cy="16" r="3" fill="#ee2a7b"/>
+            <circle cx="22" cy="10" r="1" fill="#ee2a7b"/>
+        </symbol>
+        <symbol id="icon-phone" viewBox="0 0 32 32">
+            <circle fill="#25D366" cx="16" cy="16" r="16"/>
+            <path fill="#fff" d="M24.1 20.7c-.4-.2-2.3-1.1-2.6-1.2-.3-.1-.5-.2-.7.2-.2.4-.7 1.2-.9 1.4-.2.2-.3.3-.7.1-.4-.2-1.5-.6-2.8-1.8-1-1-1.7-2.2-1.9-2.6-.2-.4 0-.6.2-.8.2-.2.4-.5.6-.7.2-.2.2-.4.3-.6.1-.2 0-.5 0-.7 0-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5-.2 0-.4 0-.6 0-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.1 0 1.2.9 2.3 1 2.5.1.2 1.7 2.7 4.1 3.7.6.3 1.1.5 1.5.6.6.2 1.1.2 1.5.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2z"/>
+        </symbol>
+    </svg>
+
+</head>
+<body>
+    <div class="container">
+        <div class="main-heading">Welcome to Saylani Welfare International Trust</div>
+        <div class="smit-heading">Saylani Mass IT Training Faisalabad (SMIT Fsd)</div>
+        <div class="news-ticker">
+            <span class="news-label">SMIT Update:</span>
+            <span class="news-scroll-container">
+                <span class="news-text">The first class of <span style="color:#111;font-weight:700;">Graphic Designing Female Batch 12</span> will be held on <span style="color:#111;font-weight:700;">Saturday from 3 pm to 5 pm</span>. Kindly attend the class. Thank you.</span>
+            </span>
+        </div>
+        <div class="section-heading">SMIT Social Media Accounts List</div>
+
+        <div class="social-grid">
+            <div class="social-row">
+                <div class="social-section">
+                    <span class="icon"><svg><use xlink:href="#icon-fb"></use></svg></span>
+                    <div class="desc-link">
+                        <div class="desc"><b>1.</b> SMIT Karachi ka main Facebook page join karen, taake aapko latest updates mil sakein.</div>
+                        <a class="social-link" href="https://www.facebook.com/saylani.smit/" target="_blank">SMIT Karachi Main Facebook Page</a>
+                    </div>
+                </div>
+                <div class="social-section">
+                    <span class="icon"><svg><use xlink:href="#icon-fb-group"></use></svg></span>
+                    <div class="desc-link">
+                        <div class="desc"><b>2.</b> Faisalabad students ke liye official Facebook group join karen.</div>
+                        <a class="social-link" href="https://www.facebook.com/groups/smitfsd" target="_blank">Faisalabad Official Facebook Group</a>
+                    </div>
+                </div>
+                <div class="social-section">
+                    <span class="icon"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 28px; height: 28px; object-fit: contain; border-radius: 6px;" /></span>
+                    <div class="desc-link">
+                        <div class="desc"><b>3.</b> WhatsApp channel join karen aur important announcements hasil karen.</div>
+                        <a class="social-link" href="https://www.whatsapp.com/channel/0029VaDiTSSFXUuhnyd4uz3W" target="_blank">WhatsApp Channel</a>
+                    </div>
+                </div>
+            </div>
+            <div class="social-row">
+                <div class="social-section">
+                    <span class="icon"><svg><use xlink:href="#icon-fb"></use></svg></span>
+                    <div class="desc-link">
+                        <div class="desc"><b>4.</b> Faisalabad ka official Facebook page follow karen.</div>
+                        <a class="social-link" href="https://www.facebook.com/share/1AQg9isQ5g/" target="_blank">Faisalabad Facebook Page</a>
+                    </div>
+                </div>
+                <div class="social-section">
+                    <span class="icon"><svg><use xlink:href="#icon-x"></use></svg></span>
+                    <div class="desc-link">
+                        <div class="desc"><b>5.</b> SMIT ki latest news aur updates X (Twitter) par bhi hasil karen.</div>
+                        <a class="social-link" href="https://x.com/smitfsd" target="_blank">X (Twitter)</a>
+                    </div>
+                </div>
+                <div class="social-section">
+                    <span class="icon"><svg><use xlink:href="#icon-linkedin"></use></svg></span>
+                    <div class="desc-link">
+                        <div class="desc"><b>6.</b> LinkedIn par SMIT Faisalabad ka page follow karen professional updates ke liye.</div>
+                        <a class="social-link" href="https://www.linkedin.com/company/smitfsd" target="_blank">LinkedIn Page</a>
+                    </div>
+                </div>
+            </div>
+            <div class="social-row">
+                <div class="social-section">
+                    <span class="icon"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 28px; height: 28px; object-fit: contain; border-radius: 6px;" /></span>
+                    <div class="desc-link">
+                        <div class="desc"><b>7.</b> Instagram par SMIT Faisalabad ki activities aur events dekhein.</div>
+                        <a class="social-link" href="https://www.instagram.com/smitfsd" target="_blank">Instagram</a>
+                    </div>
+                </div>
+                <div class="social-section">
+                    <span class="icon"><img src="https://www.saylaniwelfare.com/static/media/logo.22bf709605809177256c.png" alt="Saylani Logo" style="width: 28px; height: 28px; object-fit: contain; border-radius: 50%; background: #fff;" /></span>
+                    <div class="desc-link">
+                        <div class="desc"><b>8.</b> SMIT Admission Form par apply karne ke liye yahan click karein.</div>
+                        <a class="social-link" href="https://forms.saylaniwelfare.com" target="_blank">Admission Form</a>
+                    </div>
+                </div>
+                <div class="social-section">
+                    <span class="icon"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 28px; height: 28px; object-fit: contain; border-radius: 6px;" /></span>
+                    <div class="desc-link">
+                        <div class="desc"><b>9.</b> Official WhatsApp Number par direct contact karen ya message bhejein.</div>
+                        <a class="social-link" href="https://wa.me/923378659969" target="_blank">+92-337-8659969</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="follow-social-message">
+            <span>Please <b>Follow</b>, <b>Like</b>, <b>Share</b>, and <b>Join</b> our social media channels to stay connected with SMIT!</span>
+        </div>
+    </div>
+    <div class="footer-location-bar">
+        <span class="footer-location-label">Location:</span> Saylani House, Lal Mil Chowk, 3rd Floor, Factory Area
+    </div>
+    <footer class="footer">
+        © 2024 Saylani Mass IT Training (SMIT) Faisalabad. All rights reserved.
+    </footer>
+</body>
+</html> 
