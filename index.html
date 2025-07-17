@@ -202,7 +202,7 @@
             display: inline-block;
             white-space: nowrap;
             padding-left: 100%;
-            animation: ticker-scroll 18s linear infinite;
+            animation: ticker-scroll 28s linear infinite;
         }
         @keyframes ticker-scroll {
             0% { transform: translateX(0); }
@@ -316,6 +316,33 @@
             font-weight: 700;
             margin-right: 6px;
         }
+        .logo-left {
+            position: absolute;
+            top: 18px;
+            left: 18px;
+            z-index: 10;
+            background: #e0f3ff;
+            border-radius: 8px;
+            padding: 6px 10px 6px 6px;
+            box-shadow: 0 2px 8px rgba(10,124,186,0.07);
+            display: flex;
+            align-items: center;
+        }
+        .logo-left img {
+            height: 48px;
+            width: auto;
+            display: block;
+        }
+        @media (max-width: 600px) {
+            .logo-left {
+                top: 6px;
+                left: 6px;
+                padding: 3px 6px 3px 3px;
+            }
+            .logo-left img {
+                height: 32px;
+            }
+        }
     </style>
 
     <!-- SVG ICONS -->
@@ -363,6 +390,9 @@
 
 </head>
 <body>
+    <div class="logo-left">
+        <img src="smitlogo.png" alt="SMIT Logo" />
+    </div>
     <div class="container">
         <div class="main-heading">Welcome to Saylani Welfare International Trust</div>
         <div class="smit-heading">Saylani Mass IT Training Faisalabad (SMIT Fsd)</div>
@@ -379,7 +409,7 @@
                 <div class="social-section">
                     <span class="icon"><svg><use xlink:href="#icon-fb"></use></svg></span>
                     <div class="desc-link">
-                        <div class="desc"><b>1.</b> SMIT Karachi ka main Facebook page join karen, taake aapko latest updates mil sakein.</div>
+                        <div class="desc"><b>1.</b> SMIT Karachi main Facebook page Like & follow karen.</div>
                         <a class="social-link" href="https://www.facebook.com/saylani.smit/" target="_blank">SMIT Karachi Main Facebook Page</a>
                     </div>
                 </div>
@@ -432,7 +462,7 @@
                 <div class="social-section">
                     <span class="icon"><img src="https://www.saylaniwelfare.com/static/media/logo.22bf709605809177256c.png" alt="Saylani Logo" style="width: 28px; height: 28px; object-fit: contain; border-radius: 50%; background: #fff;" /></span>
                     <div class="desc-link">
-                        <div class="desc"><b>8.</b> SMIT Admission Form par apply karne ke liye yahan click karein.</div>
+                        <div class="desc"><b>8.</b> SMIT Admission Form par apply karne aur student portal k liye yahan click karein.</div>
                         <a class="social-link" href="https://forms.saylaniwelfare.com" target="_blank">Admission Form</a>
                         <a class="social-link" href="https://student.saylaniwelfare.com/login" target="_blank" style="margin-left:8px;">Student Portal</a>
                     </div>
@@ -440,7 +470,7 @@
                 <div class="social-section">
                     <span class="icon"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 28px; height: 28px; object-fit: contain; border-radius: 6px;" /></span>
                     <div class="desc-link">
-                        <div class="desc"><b>9.</b> Official WhatsApp Number par direct contact karen ya message bhejein.</div>
+                        <div class="desc"><b>9.</b> Official Whatsapp Num (<span style='color:#e53935'>(Our official WhatsApp num is temporarily blocked )</span></div>
                         <a class="social-link" href="https://wa.me/923378659969" target="_blank">+92-337-8659969</a>
                     </div>
                 </div>
